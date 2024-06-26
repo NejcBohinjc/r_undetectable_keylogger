@@ -2,7 +2,9 @@ from pynput.keyboard import Key, Listener
 from datetime import date, datetime
 
 today =  date.today()
-time_now = datetime.now()
+c = datetime.now()
+time_now = c.strftime('%H:%M:%S')
+
 
 #this function creates a txt file
 def create_txt():
