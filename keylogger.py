@@ -12,7 +12,7 @@ def create_txt():
 
 #this function prints the pressed key
 def on_press(key):
-   print(f'{time_now}', end = ": ")
+   print(f'{today} {time_now}', end = ": ")
    print(key)
 
 while True:
