@@ -1,0 +1,13 @@
+a
+s
+a
+s
+a
+s
+a
+s
+a
+s
+Key.ctrl_l
+Key.ctrl_l
+Key.backspace
